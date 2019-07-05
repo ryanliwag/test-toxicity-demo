@@ -1,7 +1,7 @@
 {
-  "name": "d3-suicide",
+  "name": "test_demo",
   "version": "1.0.0",
-  "description": "D3 Force Graph showcase of the suicide Dataset",
+  "description": "short demo on toxicity classification",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
