@@ -11,38 +11,43 @@
 <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
 
 <style>
-.flip {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-html, body {
-    height: 100%;
+    .flip {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
     
-}   
-table {
-    font-size: 1vw;
-}
-.page-wrap {
-    min-height: 100%;
-    /* equal to footer height */
-}
-.page-wrap:after {
-    content: "";
-    display: block;
-}
-.site-footer, .page-wrap:after {
-    padding-top: 30px;
-    height: 60px; 
-
-}
-.site-footer {
-    background: #efefef;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
+    html,
+    body {
+        height: 100%;
+    }
+    
+    table {
+        font-size: 1vw;
+    }
+    
+    .page-wrap {
+        min-height: 100%;
+        /* equal to footer height */
+    }
+    
+    .page-wrap:after {
+        content: "";
+        display: block;
+    }
+    
+    .site-footer,
+    .page-wrap:after {
+        padding-top: 30px;
+        height: 60px;
+    }
+    
+    .site-footer {
+        background: #efefef;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 </style>
 
 <header class="header">
@@ -51,32 +56,31 @@ table {
 </header>
 
 <body>
-    <div class="container">    
-                    <label>Text Input</label>
-                        <textarea id="commentField"></textarea>
-                        <button id="predict-text">Classify</button>
-                <table>
-                    <thead>
-                      <tr>
-                        <th>Category</th>
-                        <th>Confidence</th>
-                        <th>Result</th>
-                      </tr>
-                    </thead>
-                    <tbody id="prediction_results">
-                    </tbody>
-                  </table> 
+    <div class="container">
+        <label>Text Input</label>
+        <textarea id="commentField"></textarea>
+        <button id="predict-text">Classify</button>
+        <h4 style="text-align: center" id="classified-text"></h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Confidence</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="prediction_results">
+            </tbody>
+        </table>
     </div>
 
-
-
     <footer class="site-footer">
-            <p>
-                <em>
-                    <a>Built using tensorflow.js and test demo by Ryan Liwag</a>.
-                </em>
-            </p>
-        </footer>
+        <p>
+            <em>
+                <a>Built using tensorflow.js and test demo by Ryan Liwag</a>.
+            </em>
+        </p>
+    </footer>
 </body>
 
 <script src="main.js"></script>
